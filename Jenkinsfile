@@ -8,7 +8,7 @@ pipeline {
                 script {
                     dir('nginx') {
                         // Build Nginx Docker image
-                        sh 'docker build -t Nginx-image .'
+                        sh '/usr/bin/docker build -t Nginx-image .'
                     }
                 }
             }
@@ -19,7 +19,7 @@ pipeline {
                 script {
                     dir('apache') {
                         // Build Apache Docker image
-                        sh 'docker build -t Apache-image .'
+                        sh '/usr/bin/docker build -t Apache-image .'
                     }
                 }
             }

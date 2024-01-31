@@ -4,12 +4,12 @@ services:
     build:
       context: ./nginx
     ports:
-      - "8080:80"
+      - "8081:80"
     restart: on-failure
 
   apache-container:
     build:
       context: ./apache
     ports:
-      - "8081:80"
+      - "8082:80"
     restart: on-failure

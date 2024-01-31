@@ -14,7 +14,7 @@ pipeline {
                 script {
                     dir('nginx') {
                         // Build Nginx Docker image
-                        sh 'docker build -t Nginx-image --build-arg DOCKER_HOST=127.0.0.1 .'
+                        sh 'docker build -t Nginx-image .'
                     }
                 }
             }

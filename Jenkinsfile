@@ -1,6 +1,13 @@
 pipeline {
     agent any
     stages {
+        stage('Debug') {
+          steps {
+              script {
+                  sh 'cat /etc/hosts'
+              }
+          }
+        }
 
         stage('Build Nginx') {
             steps {

@@ -1,10 +1,5 @@
 pipeline {
-    agent {
-        docker {
-            image 'jenkins/agent:latest-jdk11'
-            args '--network bridge --env DOCKER_HOST=tcp://172.17.0.2:2376 --env DOCKER_TLS_VERIFY=1 --env DOCKER_CERT_PATH=/certs/client'
-        }
-    }
+    agent any
 
     stages {
 
